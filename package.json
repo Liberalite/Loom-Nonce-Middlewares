@@ -1,0 +1,42 @@
+{
+  "name": "loom-erc223-example",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "loom-js": "1.54.1",
+    "loom-truffle-provider": "0.13.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-scripts": "3.0.1",
+    "web3": "1.0.0-beta.36"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "ganache": "ganache-cli -b 1 -a 31 -e 1000",
+    "loom-proxy": "cd ./loom-provider-json-rpc-proxy; yarn build; PORT=8545 CHAIN_ENDPOINT='wss://extdev-plasma-us1.dappchains.com' node .",
+    "migrate": "cd truffle && truffle migrate --network extdev",
+    "deploy": "cd truffle && truffle deploy --network loom_dapp_chain",
+    "deploy:reset": "cd truffle && truffle deploy --reset --network loom_dapp_chain",
+    "deploy:extdev": "cd truffle && truffle deploy --network extdev_plasma_us1",
+    "deploy:reset:extdev": "cd truffle && truffle deploy --reset --network extdev_plasma_us1",
+    "gen:loom-key": "mkdir loom && cd loom && curl https://raw.githubusercontent.com/loomnetwork/loom-sdk-documentation/master/scripts/get_loom.sh | sh && chmod +x ./loom && ./loom genkey --private_key loom_private_key --public_key loom_public_key && cp loom_private_key ../truffle/"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
