@@ -15977,12 +15977,12 @@
         }
       },
       "links": {},
-      "address": "0xD3Bc18d62b401153e2e026Af635bF12Ff17E3532",
-      "transactionHash": "0x5c28bf099e2b97b81a5b6d2a5534c89ffcca5125d1761c7f477d12fd90fc90ae"
+      "address": "0x48e2874e89C328BE3c57f222aE0D2b1D176a491d",
+      "transactionHash": "0x58513a369e8833e4116997d5954c3591c2b96818d4b88d4b63a7a649a6f0546f"
     }
   },
   "schemaVersion": "3.0.0-beta.2",
-  "updatedAt": "2019-07-05T13:51:07.048Z",
+  "updatedAt": "2019-07-05T22:32:00.882Z",
   "devdoc": {
     "methods": {
       "transfer(address,uint256)": {

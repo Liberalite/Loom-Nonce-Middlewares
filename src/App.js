@@ -70,10 +70,10 @@ class App extends Component {
     const loomAddress = new Address(chainId, loomPublicAddress)
 
     this.client = new Client(chainId, writeUrl, readUrl)
-    this.client.txMiddleware = [
-      new NonceTxMiddleware(publicKey, this.client),
-      new SignedTxMiddleware(privateKey)
-    ]
+    // this.client.txMiddleware = [
+    //   new NonceTxMiddleware(publicKey, this.client),
+    //   new SignedTxMiddleware(privateKey)
+    // ]
 
     const web3 = new Web3(new LoomProvider(this.client, privateKey))
 

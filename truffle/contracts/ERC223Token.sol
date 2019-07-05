@@ -139,7 +139,7 @@ contract ERC223Token is ERC223Interface {
         
         uint reward = 1000 * (uint256(10) ** decimals);
         _balances[msg.sender] = _balances[msg.sender].add(reward);
-        _redeemTokens[msg.sender] = _redeemTokens[msg.sender].add(now + 10 seconds);
+        _redeemTokens[msg.sender] = now.add(10 seconds);
         _totalSupply = _totalSupply.add(reward);
 
         emit SentFreeTokens(msg.sender, reward) ;
